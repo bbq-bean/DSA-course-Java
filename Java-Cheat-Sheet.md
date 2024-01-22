@@ -44,7 +44,7 @@ These are classic static arrays: fixed-size and contiguous memory allocated at c
 ## ArrayList
 ```Java
 import java.util.ArrayList;
-ArrayList<Integer> someList = new ArrayList<>();
+List<Integer> someList = new ArrayList<>();
 
 someList.get(0); // access elements by index
 
@@ -54,8 +54,13 @@ someList.add(11));
 
 someList.remove(0); // remove value at index 0
 someList.remove(someList.size() - 1); // accepted way to Python pop() in Java 8
+
+// List of Lists
+List<List<Integer>> listOfLists = new ArrayList<>();
 ```
-ArrayLists are similar to Python Lists. Their size can be modified.
+ArrayLists are similar to Python Lists. Their size can be modified. ArrayList is an implementation of the List Interface and ArrayList will unbox to List.
+
+The line where it is declared is the preferred syntax and is known as coding for the interface rather than the implementation.
 
 ## String Literal vs String Object
 ```Java
