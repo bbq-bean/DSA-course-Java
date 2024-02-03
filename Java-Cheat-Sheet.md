@@ -2,7 +2,7 @@
 ```Java
 import java.util.HashSet;
 
-HashSet<Integer> seent = new HashSet<>();
+Set<Integer> seent = new HashSet<>();
 
 seent.contains(item);
 seent.add(item);
@@ -14,7 +14,7 @@ Java HashSet is similar to Python set().
 ```Java
 import java.util.HashMap;
 
-HashMap<Character, Integer> s_map = new HashMap<>();
+Map<Character, Integer> s_map = new HashMap<>();
 
 s_map.containsKey(key);
 s_map.put(key, value);
