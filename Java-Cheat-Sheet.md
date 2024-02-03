@@ -10,6 +10,7 @@ seent.remove(item);
 ```
 Java HashSet is similar to Python set().
 
+
 ## HashMap
 ```Java
 import java.util.HashMap;
@@ -23,7 +24,9 @@ s_map.get(key);
 s_map.getOrDefault(key, default value);
 ```
 
-Java HashMap is like a Python dictionary. It looks like this:
+Java HashMap is like a Python dictionary. 
+
+It looks like this:
 {a=3, r=1, g=1, m=1, n=1}.
 
 ## Static Arrays
@@ -33,6 +36,8 @@ String someArray2[] = new String[5];
 // or
 int nextArray[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
 String nextArray2[] = {"zero", "one", "two", "three", "four"};
+
+double[][] array2D = new double[3][3]; // 2d array
 
 someArray.length
 
@@ -61,6 +66,57 @@ List<List<Integer>> listOfLists = new ArrayList<>();
 ArrayLists are similar to Python Lists. Their size can be modified. ArrayList is an implementation of the List Interface and ArrayList will unbox to List.
 
 The line where it is declared is the preferred syntax and is known as coding for the interface rather than the implementation.
+
+## Stack
+```Java
+import java.util.ArrayDeque;
+import java.util.Deque;
+
+Deque<Integer> someStack = new ArrayDeque<>();
+
+someStack.push(10);
+someStack.push(20);
+
+someStack.peek() // like Python my_stack[-1] to check last element
+
+someStack.pop()
+
+```
+Notice this is just a deque, which has stack functions.
+
+## Queue
+```Java
+import java.util.ArrayDeque;
+import java.util.Deque;
+
+Queue<Integer> someQueue = new ArrayDeque<>();
+// or
+Queue<Integer> someQueue = new LinkedList<>();
+
+queue.offer(3); // enque an item
+
+queue.peek(); // peek front element
+
+queue.poll(); // deque front element
+
+```
+Java queue acts strictly as FIFO, you can only pull elements from the head of the queue.
+
+## Deque
+```Java
+import java.util.ArrayDeque;
+import java.util.Deque;
+
+Deque<Integer> deque = new ArrayDeque<>();
+
+// Add elements to the deque
+deque.addFirst(1);
+deque.addLast(2);
+
+int firstElement = deque.removeFirst();
+int lastElement = deque.removeLast();
+```
+Java deque keeps pointers for both ends, so operations to front or end are all O(1)
 
 ## String Literal vs String Object
 ```Java
