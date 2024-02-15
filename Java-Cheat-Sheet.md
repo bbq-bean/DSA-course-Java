@@ -36,6 +36,13 @@ String someArray2[] = new String[5];
 // or
 int nextArray[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
 String nextArray2[] = {"zero", "one", "two", "three", "four"};
+// OR
+String abc[]; // this only declares a reference to an array
+abc = new String[3]; // initializes the array
+		
+abc[0] = "aye";
+abc[1] = "bee";
+abc[2] = "see";
 
 double[][] array2D = new double[3][3]; // 2d array
 
