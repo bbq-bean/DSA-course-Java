@@ -4,6 +4,8 @@ import java.util.HashSet;
 
 Set<Integer> seent = new HashSet<>();
 
+Set<T> seent = new HashSet<>(); // hashset for generic type you could add any object to this
+
 seent.contains(item);
 seent.add(item);
 seent.remove(item);
@@ -164,11 +166,11 @@ int b = a; // Integer.intValue() unboxes to primative int
   - **_final_** means the class cannot be inherited.
   - **_abstract_** means the class cannot create objects(to use the class, it must be inherited)
 
-- Java Attribute/Method Access modifier by default(**no access modifier**) only let the code be accessed from the same package. Here the rest are from least to greatest security:
-  - **_public_** makes the attribute/method accessible from all classes
-  - **_protected_** makes it accessible only from classes in the the same package _and_ from subclasses of that same class
-  - **_default_** is package private. Only classes in the same package can access.
+- Java Attribute/Method Access modifier by default(**no access modifier**) only let the code be accessed from the same package. Here the rest are from greatest to least security:
   - **_private_** makes the attribute/method only accessible from same class
+  - **_default_** is package private. Other classes can access, but must be in same package
+  - **_protected_** makes it accessible only from classes in the the same package _and_ from subclasses of that same class(which could be in a different package) only as inherited attributes/methods though, never directly referencing the parent class
+  - **_public_** makes the attribute/method accessible from all classes, anywhere
 
 
 - Java Attribute/Method Non-Access modifiers can be **_final_**, **_static_**, **_abstract_**, **_transient_**, **_synchronized_**, **_volatile_**
