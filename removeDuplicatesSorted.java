@@ -1,25 +1,17 @@
 class Solution {
     public int removeDuplicates(int[] nums) {
-        // 2 pointers
-        // starting at k, check k + 1
+        int left = 0;
+        int right = 1;
 
-        // if k - 1 != k, that means, k a new unique
-
-        // bump n++ and swap k with n
-        // so swap k with n
-        // 111222333
-
-        int k = 1;
-        int n = 0;
-
-        while (k < nums.length) {
-            if (nums[k] != nums[k - 1]) {
-                n++;
-                nums[n] = nums[k];
+        while (right < nums.length) {
+            if (nums[right] != nums[right - 1]) { // current num is a new num
+                left++; // left is the current END of our unique list, so add a spot for a new unique
+                nums[left] = nums[right]; // now add the new found unique
                 
             }
-            k++;
+            right++; // continue through the array
         }
 
-        return n + 1;
+        return ++left; // left is also out unique counter, but remember its always behind by 1
     }
+}
